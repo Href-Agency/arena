@@ -1,0 +1,25 @@
+{
+    "name": "acf/hero",
+    "title": "Hero",
+    "description": "Hero Block",
+    "category": "theme",
+    "apiVersion": 2,
+    "example": {
+        "attributes": {
+            "data": {
+                "preview-screenshot": "block-preview.png"
+            },
+            "mode": "preview"
+        }
+    },
+    "acf": {
+        "mode": "preview",
+        "renderTemplate": "includes/blocks/hero/block.php"
+    },
+    "style": "file:./dist/block.min.css",
+    "supports": {
+        "anchor": true, 
+        "mode": true,
+        "align": false
+    }
+}
