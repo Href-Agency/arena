@@ -1,0 +1,4 @@
+node_modules
+.htaccess
+wp-config.php
+package-lock.json

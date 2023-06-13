@@ -1,0 +1,26 @@
+{
+    "name": "acf/fifty-fifty-block",
+    "title": "Fifty Fifty Block",
+    "description": "A fifty fifty block, here you can add some text and an image, you should be able to flip the layout also.",
+    "category": "theme",
+    "apiVersion": 2,
+    "example": {
+        "attributes": {
+            "data": {
+                "preview-screenshot": "block-preview.png"
+            },
+            "mode": "preview"
+        }
+    },
+    "acf": {
+        "mode": "preview",
+        "renderTemplate": "includes/blocks/fifty-fifty-block/block.php"
+    },
+    
+    "style": "file:./dist/block.min.css",
+    "supports": {
+        "anchor": true, 
+        "mode": true,
+        "align": false
+    }
+}

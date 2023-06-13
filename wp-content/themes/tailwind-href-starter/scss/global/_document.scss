@@ -1,0 +1,27 @@
+::-moz-selection {
+  text-shadow: none;
+  background: black;
+  color: white;
+}
+
+::selection {
+  text-shadow: none;
+  background: black;
+  color: white;
+}
+
+html, 
+body {
+  font-size: 100%;
+}
+
+html {
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+
+p {
+  @apply mb-15;
+}
+
