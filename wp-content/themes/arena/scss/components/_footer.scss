@@ -1,3 +1,24 @@
 .site-footer {
+    .wysywig{
+        *{
+            color: #9A9A9A;
+            font-size: 16px !important;
+        }
+        a{
+            font-size: inherit;
+            line-height: inherit;
+            display: inline;
+            &::before, &::after{
+                content: unset !important;
+            }
+        }
+    }
 
+    &__menu{
+        li{
+            a{
+                @apply text-18 sm:text-16 leading-[2.2];
+            }
+        }
+    }
 }

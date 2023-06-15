@@ -1,0 +1,25 @@
+{
+    "name": "acf/logos",
+    "title": "Logos",
+    "description": "5 column grid of logos",
+    "category": "theme",
+    "apiVersion": 2,
+    "example": {
+        "attributes": {
+            "data": {
+                "preview-screenshot": "block-preview.png"
+            },
+            "mode": "preview"
+        }
+    },
+    "acf": {
+        "mode": "preview",
+        "renderTemplate": "includes/blocks/logos/block.php"
+    },
+    "style": "file:./dist/block.min.css",
+    "supports": {
+        "anchor": true, 
+        "mode": true,
+        "align": false
+    }
+}

@@ -3,6 +3,24 @@
     "title": "Block : Hero",
     "fields": [
         {
+            "key": "field_648994205ad85",
+            "label": "Text",
+            "name": "",
+            "aria-label": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "acfe_save_meta": 0,
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
             "key": "field_648891155fefe",
             "label": "Text",
             "name": "text",
@@ -50,6 +68,24 @@
                 "disableExtraSpaces"
             ],
             "delay": 0
+        },
+        {
+            "key": "field_648994485ad86",
+            "label": "Background",
+            "name": "",
+            "aria-label": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "acfe_save_meta": 0,
+            "placement": "top",
+            "endpoint": 0
         },
         {
             "key": "field_648891775ff02",
@@ -140,5 +176,5 @@
     "acfe_form": 0,
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1686671841
+    "modified": 1686738003
 }

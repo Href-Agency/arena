@@ -1,0 +1,51 @@
+.project-relationship{
+    .grid{
+        .single-project-container{
+            &:nth-child(4n - 3), &:nth-child(4n){
+                @media only screen and (min-width: 831px){
+                    grid-row: span 2;
+                }
+
+                .image-container{
+                    img{
+                        height: 200px;
+                        width: 100%;
+                        object-fit: cover;
+                        @media only screen and (min-width: 1024px){
+                            height: 280px;
+                        }
+                        @media only screen and (min-width: 1380px){
+                            height: 350px;
+                        }
+                        @media only screen and (min-width: 1580px){
+                            height: 431px;
+                        }
+                    }
+                }
+            }
+
+            &:nth-child(4n - 2), &:nth-child(4n - 1){
+                @media only screen and (min-width: 831px){
+                    grid-row: span 3;
+                }
+
+                .image-container{
+                    img{
+                        height: 277px;
+                        width: 100%;
+                        object-fit: cover;
+                        @media only screen and (min-width: 1024px){
+                            height: 375px;
+                        }
+                        @media only screen and (min-width: 1380px){
+                            height: 450px;
+                        }
+                        @media only screen and (min-width: 1580px){
+                            height: 595px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -44,7 +44,7 @@ if ($block && $block_id && $spacings = $block['ghostkitSpacings']) {
     }
 </style>
 
-<div id="<?php echo $block_id; ?>" class="<?php echo $class_name; ?> h-screen w-screen relative overflow-hidden">
+<section id="<?php echo $block_id; ?>" class="<?php echo $class_name; ?> h-screen w-screen relative overflow-hidden">
     <div class="background absolute w-screen h-screen z-10 scale-100">
         <img class="desktop w-full h-full object-cover <?php if($mobile_background_image) echo "hidden md:block "?>" src="<?php echo $background_image['url']; ?>" alt="">
         <?php if($mobile_background_image):?>
@@ -54,4 +54,6 @@ if ($block && $block_id && $spacings = $block['ghostkitSpacings']) {
     <div class="site-container flex items-center justify-center text-center h-full relative z-50" data-speed="0.85">
         <div class="text-white"><?php echo $text; ?></div>
     </div>
-</div>
+
+    <a class="anchor-link" anchor-next-section="true"></a>
+</section>

@@ -2,7 +2,19 @@
     "/dist/main.min.js": "/dist/main.min.js",
     "/includes/blocks/fifty-fifty-block/dist/block.js": "/includes/blocks/fifty-fifty-block/dist/block.js",
     "/includes/blocks/hero/dist/block.js": "/includes/blocks/hero/dist/block.js",
+    "/includes/blocks/latest-news/dist/block.js": "/includes/blocks/latest-news/dist/block.js",
+    "/includes/blocks/logos/dist/block.js": "/includes/blocks/logos/dist/block.js",
+    "/includes/blocks/project-relationship/dist/block.js": "/includes/blocks/project-relationship/dist/block.js",
+    "/includes/blocks/testimonial/dist/block.js": "/includes/blocks/testimonial/dist/block.js",
+    "/includes/blocks/text-hero/dist/block.js": "/includes/blocks/text-hero/dist/block.js",
+    "/includes/blocks/two-col-text/dist/block.js": "/includes/blocks/two-col-text/dist/block.js",
     "/dist/main.min.css": "/dist/main.min.css",
+    "/includes/blocks/logos/dist/block.min.css": "/includes/blocks/logos/dist/block.min.css",
+    "/includes/blocks/latest-news/dist/block.min.css": "/includes/blocks/latest-news/dist/block.min.css",
     "/includes/blocks/hero/dist/block.min.css": "/includes/blocks/hero/dist/block.min.css",
-    "/includes/blocks/fifty-fifty-block/dist/block.min.css": "/includes/blocks/fifty-fifty-block/dist/block.min.css"
+    "/includes/blocks/fifty-fifty-block/dist/block.min.css": "/includes/blocks/fifty-fifty-block/dist/block.min.css",
+    "/includes/blocks/two-col-text/dist/block.min.css": "/includes/blocks/two-col-text/dist/block.min.css",
+    "/includes/blocks/text-hero/dist/block.min.css": "/includes/blocks/text-hero/dist/block.min.css",
+    "/includes/blocks/testimonial/dist/block.min.css": "/includes/blocks/testimonial/dist/block.min.css",
+    "/includes/blocks/project-relationship/dist/block.min.css": "/includes/blocks/project-relationship/dist/block.min.css"
 }

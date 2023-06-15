@@ -13,11 +13,12 @@ module.exports = {
       './includes/lib/*.php',
       './includes/partials/*.php',
       './js/*.js',
-      './includes/blocks/**/*.php'
+      './includes/blocks/**/*.php',
+      './template-parts/*.php'
     ]),
     theme: {
         screens: {
-            'sm': '450px',
+            'sm': '600px',
             // => @media (min-width: 420px) { ... }
         
             'md': '831px',
@@ -63,6 +64,7 @@ module.exports = {
                  * https://tailwindcss.com/docs/customizing-colors#adding-additional-colors
                  */
                 grey: {
+                    50: '#B9B9B9',
                     100: '#9A9A9A',
                     200: '#6A6A6A'
                 },
@@ -82,6 +84,9 @@ module.exports = {
                     800: '#846358',
                     900: '#43302b',
                   },
+            },
+            fontFamily: {
+                monaco: ['Monaco', 'sans-serif']
             }
         },
        

@@ -9,11 +9,15 @@
     <?php wp_head(); ?>
   </head>
 
+  <?php 
+    $white_header_text = get_field('white_header_text');
+  ?>
+
   <body <?php body_class(); ?>>
     <?php wp_body_open(); ?>
     
     <div class="site-wrapper">
-      <header class="site-header text-white fixed pt-36 md:pt-80 2xl:pt-122 w-screen top-0 z-[99999999]">
+      <header class="site-header text-white fixed pt-36 md:pt-80 2xl:pt-122 w-screen top-0 z-[99999999] <?php if(!$white_header_text) echo "dark"; ?>">
         <div class="site-container flex flex-row justify-between z-[999999]">
 
           <?php if(have_rows('social_media_links', 'option')): ?>
@@ -35,11 +39,11 @@
 
           <a href="<?php echo home_url(); ?>" class="site-logo flex flex-row gap-6 lg:flex-grow justify-center relative">
             <img class="dark absolute left-1/2 -translate-x-[49%] top-0 opacity-0" src="<?php echo get_template_directory_uri(); ?>/assets/logo-split/arena-a-dark.svg" alt="">
-            <img class="light" src="<?php echo get_template_directory_uri(); ?>/assets/logo-split/arena-a.svg" alt="">
-            <img class="light hidden lg:block" src="<?php echo get_template_directory_uri(); ?>/assets/logo-split/arena-r.svg" alt="">
-            <img class="light hidden lg:block" src="<?php echo get_template_directory_uri(); ?>/assets/logo-split/arena-e.svg" alt="">
-            <img class="light hidden lg:block" src="<?php echo get_template_directory_uri(); ?>/assets/logo-split/arena-n.svg" alt="">
-            <img class="light hidden lg:block" src="<?php echo get_template_directory_uri(); ?>/assets/logo-split/arena-a.svg" alt="">
+            <img class="light" src="<?php echo get_template_directory_uri(); ?>/assets/logo-split/arena-a<?php if(!$white_header_text) echo "-dark"; ?>.svg" alt="">
+            <img class="light hidden lg:block" src="<?php echo get_template_directory_uri(); ?>/assets/logo-split/arena-r<?php if(!$white_header_text) echo "-dark"; ?>.svg" alt="">
+            <img class="light hidden lg:block" src="<?php echo get_template_directory_uri(); ?>/assets/logo-split/arena-e<?php if(!$white_header_text) echo "-dark"; ?>.svg" alt="">
+            <img class="light hidden lg:block" src="<?php echo get_template_directory_uri(); ?>/assets/logo-split/arena-n<?php if(!$white_header_text) echo "-dark"; ?>.svg" alt="">
+            <img class="light hidden lg:block" src="<?php echo get_template_directory_uri(); ?>/assets/logo-split/arena-a<?php if(!$white_header_text) echo "-dark"; ?>.svg" alt="">
           </a>
 
           <nav class="site-header__navigation flex-grow hidden lg:flex justify-end flex-[40%]">

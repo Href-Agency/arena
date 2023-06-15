@@ -18,13 +18,44 @@ gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
 
   const Base = (() => {
 
+    const loadMore = (
+      loadMoreButton,
+      loadMoreContainer,
+      loadMoreElement,
+      postsToShow,
+      more
+    ) => {
+      $(loadMoreContainer)
+        .find(loadMoreElement)
+        .hide()
+        .slice(0, postsToShow)
+        .fadeIn()
+        .addClass("lm-visible");
+      if (!$(loadMoreContainer).find(loadMoreElement).not(".lm-visible").length) {
+        $(loadMoreButton).addClass('!hidden');
+      }
+      $(loadMoreButton).on("click", function () {
+        $(loadMoreContainer)
+          .find(loadMoreElement)
+          .not(".lm-visible")
+          .slice(0, more)
+          .fadeIn()
+          .addClass("lm-visible");
+        if (!$(loadMoreContainer).find(loadMoreElement).not(".lm-visible").length) {
+          $(loadMoreButton).addClass('!hidden');
+        } else {
+          $(loadMoreButton).show();
+        }
+      });
+    };
+
     /**
      * Runs when the document is ready.
      */
     const ready = () => {
       console.log('document ready!');
 
-      AOS.init();
+      loadMore('#load-more', '.post-list', '.post-list__single', 8, 4)
 
       if($(window).width() >300){
         let smoother = ScrollSmoother.create({
@@ -50,7 +81,6 @@ gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
               smoother.scrollTo(scroll_to, true, "top 0%");
             }else{
               var scroll_to = $(this).closest("section").next();
-              console.log(scroll_to);
               smoother.scrollTo(scroll_to, true, "top 0%");
             }
           })
@@ -71,6 +101,15 @@ gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
           })
         })
       }
+
+      AOS.init({
+        duration: 600, // Animation duration in milliseconds
+        offset: 100, // Offset (in pixels) from the original trigger point
+        easing: 'ease-out', // Easing function for the animation
+        delay: 0, // Delay (in milliseconds) before animation starts
+        once: true, // Whether to only animate elements once
+        mirror: false, // Whether elements should animate out while scrolling past them in reverse
+      });
 
       // const swiper = new Swiper()
     };

@@ -9539,7 +9539,7 @@ var hero = function () {
       trigger: '.hero',
       start: 'top top',
       end: 'bottom top',
-      scrub: true
+      scrub: 0.5
     }
   });
 }();

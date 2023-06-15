@@ -156,6 +156,9 @@
                 stroke: #1A2E3B;
             }
         }
+        &.up{
+            box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.07);
+        }
         &:not(.up){
             transform: translateY(-150%);
             transition: background-color .5s ease 600ms, transform .5s ease 1200ms, padding .5s ease 600ms;
@@ -187,6 +190,23 @@
                 transition: stroke-dasharray 400ms, stroke-dashoffset 400ms, stroke 400ms 0ms;
                 stroke: #fff;
             }
+        }
+    }
+    &.dark{
+        background-color: #fff;
+        .social-media{
+            .icon-image{
+                background-color: #1A2E3B;
+            }
+        }
+        .site-header__menu a, .site-header__navigation-mobile a:not(.single-link){
+            color: #1A2E3B;
+            &::before{
+                background: #1A2E3B;
+            }
+        }
+        &.scrolling{
+            box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.07);
         }
     }
 }
