@@ -192,6 +192,7 @@
             }
         }
     }
+    
     &.dark:not(.open){
         background-color: #fff;
         .social-media{
@@ -207,6 +208,25 @@
         }
         &.scrolling{
             box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.07);
+            .site-logo{
+                img.dark{
+                    opacity: 0;
+                }
+                img.light:first-child{
+                    opacity: 1;
+                }
+            }
+        }
+    }
+
+    &.open.dark{
+        .site-logo{
+            img.dark{
+                opacity: 1;
+            }
+            img.light:first-child{
+                opacity: 0;
+            }
         }
     }
 }

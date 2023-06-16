@@ -39,7 +39,7 @@
           <?php endif; ?>
 
           <a href="<?php echo home_url(); ?>" class="site-logo flex flex-row gap-6 lg:flex-grow justify-center relative">
-            <img class="dark absolute left-1/2 -translate-x-[49%] top-0 opacity-0" src="<?php echo get_template_directory_uri(); ?>/assets/logo-split/arena-a-dark.svg" alt="">
+            <img class="dark absolute left-1/2 -translate-x-[49%] top-0 opacity-0" src="<?php echo get_template_directory_uri(); ?>/assets/logo-split/arena-a<?php if($white_header_text) echo "-dark"; ?>.svg" alt="">
             <img class="light" src="<?php echo get_template_directory_uri(); ?>/assets/logo-split/arena-a<?php if(!$white_header_text) echo "-dark"; ?>.svg" alt="">
             <img class="light hidden lg:block" src="<?php echo get_template_directory_uri(); ?>/assets/logo-split/arena-r<?php if(!$white_header_text) echo "-dark"; ?>.svg" alt="">
             <img class="light hidden lg:block" src="<?php echo get_template_directory_uri(); ?>/assets/logo-split/arena-e<?php if(!$white_header_text) echo "-dark"; ?>.svg" alt="">
