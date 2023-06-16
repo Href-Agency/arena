@@ -18,6 +18,7 @@ $data = $args['data'];
 
 $header = $data['header'];
 $copy = $data['copy'];
+$increase_width = $data['increase_width'];
 
 /**
  * Unique block identifier added to the block
@@ -40,8 +41,8 @@ if ($block && $block_id && $spacings = $block['ghostkitSpacings']) {
 <!-- Our front-end template -->
 <section id="<?php echo $block_id; ?>" class="<?php echo $class_name; ?> pt-150 md:pt-199 xl:pt-[275px] mb-60 md:mb-80 xl:mb-128" >
     <div class="site-container text-center">
-        <div class="heading mb-32"><?php echo $header; ?></div>
-        <div class="wysywig max-w-[990px] mx-auto">
+        <div class="heading mb-32 max-w-[572px] mx-auto"><?php echo $header; ?></div>
+        <div class="wysywig <?php if($increase_width):?> mt-50 lg:mt-93 max-w-[1344px] text-left <?php else: ?> max-w-[990px]<?php endif; ?> mx-auto" data-speed="1.02">
             <?php echo $copy; ?>
         </div>
     </div>

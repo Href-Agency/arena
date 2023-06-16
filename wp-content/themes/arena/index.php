@@ -1,24 +1,55 @@
 
 <?php get_header(); ?>
 
+<?php
+
+
+  $data = array(
+    'header' => get_field('news_header', 'option') ?? 'News + insights',
+    'copy' => get_field('news_copy', 'option') ?? false
+  );
+
+?>
+
 <article <?php post_class('blocks'); ?> id="smooth-content">
-  <div class="min-h-[50vh]">
-    <div class="site-container">
+  <div class="min-h-[50vh] news-archive">
+    
+    <?php
+      get_template_part(
+        "includes/blocks/text-hero/template",
+        null,
+        array(
+          'data' => $data,
+          'class_name' => 'text-hero',
+          'block_id' => 'text-hero-projects',
+        )
+      );
+    ?>
+
+    <div class="site-container mb-126">
       <?php if (have_posts()) : ?>
-        <ul class="post-list">
-          <?php while (have_posts()) : the_post(); ?>
-            <li class="post-list__entry">
-              <h2 class="post-list__title"><?php the_title(); ?></h2>
-              <div class="post-list__excerpt"><?php the_excerpt(); ?></div>
-              <a class="post-list__anchor" href="<?php the_permalink(); ?>">Read more</a>
-            </li>
+
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-x-40 xl:gap-x-62 gap-y-50 md:gap-y-75 xl:gap-y-90 2xl:gap-y-120 post-list">
+          <?php while (have_posts()) : the_post();
+            $ID = get_the_id();
+            $client = get_field('client', $ID);
+            ?>
+
+            <div class="single-project-container overflow-hidden block post-list__single">
+                <div class="aos-container h-full" data-aos="custom-up" data-aos-offset="300">
+
+                  <?php 
+                      get_template_part('template-parts/news', 'card', ['client' => $client, 'id' => $ID]);
+                  ?>
+
+                </div>
+            </div>
+
           <?php endwhile; ?>
-        </ul>
-      <?php else : ?>
-        <article>
-          <h1>Sorry, there's nothing here yet!</h1>
-          <p>Please check again at a later date.</p>
-        </article>
+        </div>
+
+        <div id="load-more" class="load-more link mx-auto pt-135 !block !w-fit cursor-pointer">Load More</div>
+
       <?php endif; ?>
     </div>
   </div>

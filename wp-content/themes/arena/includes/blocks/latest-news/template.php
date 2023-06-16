@@ -38,7 +38,7 @@ if ($block && $block_id && $spacings = $block['ghostkitSpacings']) {
 
 ?>
 
-<section id="<?php echo $block_id; ?>"  class="<?php echo $class_name; ?> mb-95 pt-88 md:py-116">
+<section id="<?php echo $block_id; ?>"  class="<?php echo $class_name; ?> mb-95 mt-88 md:my-116">
     <div class="site-container">
         <div class="heading-section flex flex-row justify-between items-end mb-58" data-speed="1.03">
             <div class="header">

@@ -66,7 +66,7 @@ if ($block && $block_id && $spacings = $block['ghostkitSpacings']) {
     </div>
 
     <div class="site-container pt-59 md:pt-90 lg:pt-138 pb-61 md:pb-85 lg:pb-128 relative z-10">
-        <div class="testimonial-content text-center text-white flex flex-col items-center justify-center">
+        <div class="testimonial-content text-center text-white flex flex-col items-center justify-center" data-speed="1.05">
             <div class="quote-img" data-aos="fade-up">
                 <img src="<?php echo get_template_directory_uri() . '/assets/icons/quote.svg'; ?>" alt="">
             </div>

@@ -43,10 +43,10 @@ if ($block && $block_id && $spacings = $block['ghostkitSpacings']) {
                 while(have_rows('logos')) : the_row();
                 $logo = get_sub_field('logo');
 
-                $number = rand(98, 102) / 100;
+                $number = rand(1, 3) * 100;
                 ?>
                 <?php if($logo):?>
-                    <div class="image-container" data-speed="<?php echo $number; ?>">
+                    <div class="image-container" data-aos-delay="<?php echo $number; ?>" data-aos="fade-up">
                         <img class="hover:scale-110" src="<?php echo $logo['url']; ?>" alt="<?php echo $logo['alt']; ?>">
                     </div>
                 <?php endif; ?>

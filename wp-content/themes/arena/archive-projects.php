@@ -3,8 +3,6 @@
 
 <?php
 
-  $block_directory_name = 'text-hero';
-  $block_id = $block_directory_name . '-projects';
 
   $data = array(
     'header' => get_field('projects_header', 'option') ?? 'Projects',
@@ -39,14 +37,13 @@
   <div class="min-h-[50vh] projects-archive">
     
     <?php
-
       get_template_part(
-        "includes/blocks/" . $block_directory_name . "/template",
+        "includes/blocks/text-hero/template",
         null,
         array(
           'data' => $data,
           'class_name' => 'text-hero',
-          'block_id' => $block_id,
+          'block_id' => 'text-hero-projects',
         )
       );
     ?>

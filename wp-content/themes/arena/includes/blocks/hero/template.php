@@ -52,7 +52,7 @@ if ($block && $block_id && $spacings = $block['ghostkitSpacings']) {
         <?php endif; ?>
     </div>
     <div class="site-container flex items-center justify-center text-center h-full relative z-50" data-speed="0.85">
-        <div class="text-white"><?php echo $text; ?></div>
+        <div class="text-white max-w-[986px]"><?php echo $text; ?></div>
     </div>
 
     <a class="anchor-link" anchor-next-section="true"></a>

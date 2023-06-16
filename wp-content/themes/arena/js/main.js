@@ -55,7 +55,11 @@ gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
     const ready = () => {
       console.log('document ready!');
 
-      loadMore('#load-more', '.post-list', '.post-list__single', 8, 4)
+      if($('.projects-archive').length){
+        loadMore('#load-more', '.post-list', '.post-list__single', 8, 4)
+      }else{
+        loadMore('#load-more', '.post-list', '.post-list__single', 9, 6)
+      }
 
       if($(window).width() >300){
         let smoother = ScrollSmoother.create({

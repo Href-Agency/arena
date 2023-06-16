@@ -9,6 +9,7 @@
 $data = array(
 	'header' => get_field('header') ?? false,
 	'copy' => get_field('copy') ?? false,
+	'increase_width' => get_field('increase_width') ?? false
 );
 
 

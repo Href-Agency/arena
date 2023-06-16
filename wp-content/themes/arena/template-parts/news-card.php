@@ -4,10 +4,11 @@
 
     $category = get_the_category($ID);
     $date = get_the_date('d/m/Y', $ID);
+    $client = get_field('client');
 
 ?>
 
-<a href="<?php echo get_the_permalink($ID); ?>" class="single-news flex flex-col">
+<a href="<?php echo get_the_permalink($ID); ?>" class="single-news flex flex-col h-full">
     <div class="image-container relative">
         <img class=" object-cover w-full" src="<?php echo get_the_post_thumbnail_url($ID); ?>" alt="">
     </div>
@@ -23,7 +24,11 @@
         </div>
     </div>
 
-    <div class="date text-grey-100 border-t border-grey-100 border-solid pt-11">
-        <span class="font-monaco">Posted on <?php echo $date; ?></span>
-    </div>
+    <?php if($client): ?>
+        <span class="-mt-11 sm:-mt-23 font-monaco block text-grey-100"><?php echo $client; ?></span>
+    <?php else: ?>
+        <div class="date text-grey-100 border-t border-grey-100 border-solid pt-11">
+            <span class="font-monaco">Posted on <?php echo $date; ?></span>
+        </div>
+    <?php endif; ?>
 </a>

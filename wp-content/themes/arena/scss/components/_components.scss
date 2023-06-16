@@ -99,3 +99,12 @@
         aspect-ratio: 1 / 0.88;
     }
 }
+
+
+.marker{
+    background-color: unset !important;
+    background-image: url('../assets/icons/arena-loc.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}

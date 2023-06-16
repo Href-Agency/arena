@@ -6,12 +6,14 @@
   $copyright_text = get_field('copyright_text', 'option');
   $contact_information = get_field('contact_information', 'option');
   $policy_link = get_field('policy_link', 'option');
+
+  $remove_contact = get_field('remove_contact')
       
 ?>              
         
         <footer class="site-footer bg-blue-200 text-white pb-33 sm:pb-53">
           <div class="site-container pt-85 sm:pt-110 xl:pt-173">
-            <?php if($contact_heading || $contact_link) :?>
+            <?php if(($contact_heading || $contact_link) && !$remove_contact) :?>
               <div class="contact-block mb-125 md:mb-150 xl:mb-[222px]" data-speed="1.05">
                 <div class="heading max-w-[920px]"><?php echo $contact_heading; ?></div>
 
@@ -66,7 +68,7 @@
 
             <div class="copyright-info text-16 leading-1.3 text-grey-100 flex flex-col sm:flex-row">
               <span><?php echo $copyright_text; ?></span>
-              <a class="sm:ml-20 block" href="<?php echo $policy_link; ?>" target="<?php echo $policy_link['target']; ?>"><?php echo $policy_link['title']; ?></a>
+              <a class="sm:ml-20 block" href="<?php echo $policy_link['url']; ?>" target="<?php echo $policy_link['target']; ?>"><?php echo $policy_link['title']; ?></a>
             </div>
           </div>
         </footer>

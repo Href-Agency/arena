@@ -49,7 +49,7 @@ if ($block && $block_id && $spacings = $block['ghostkitSpacings']) {
             <?php endif; ?>
         </div>
 
-        <div class="right-column">
+        <div class="right-column" data-speed="1.06">
             <div class="wysywig">
                 <?php echo $copy; ?>
             </div>
