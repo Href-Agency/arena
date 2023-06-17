@@ -30,7 +30,7 @@
               <a href="<?php echo $link['url']; ?>" target="<?php echo $link['target']; ?>" class="single-link mr-19">
                 <?php if($icon): ?>
                   <div class="icon hover:scale-125 transition-all">
-                    <div class="w-18 h-18 bg-white icon-image" style="mask-image: url('<?php echo $icon['url']; ?>'); --webkit-mask-image: url('<?php echo $icon['url']; ?>');"></div>
+                    <div class="w-18 h-18 bg-white icon-image" style="mask-image: url('<?php echo $icon['url']; ?>'); -webkit-mask-image: url('<?php echo $icon['url']; ?>');"></div>
                   </div>
                 <?php endif; ?>
               </a>
