@@ -111,6 +111,13 @@ html {
 }
 
 
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
+
 h1, .h1{
   @apply text-73 md:text-80 2xl:text-90 leading-1.5 text-blue-300;
 }
