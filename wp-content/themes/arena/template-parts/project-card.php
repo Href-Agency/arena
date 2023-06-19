@@ -10,7 +10,7 @@
     </div>
 
     <div class="title flex flex-row justify-between mt-16 md:mt-27 items-center">
-        <h5 class="max-w-[85%]"><?php echo get_the_title($ID); ?></h5>
+        <h5 class="max-w-[85%] font-semibold text-blue-300"><?php echo get_the_title($ID); ?></h5>
         <div class="arrow ml-10 flex-shrink-0 opacity-0"></div>
     </div>
 

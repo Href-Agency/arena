@@ -191,7 +191,7 @@ function addGhostKitSpacings($spacings, $block_id) {
        * Set alla da margins to deez fault
        */
     
-      if (in_array($key, ["media_xl", "media_lg", "media_md", "media_sm"])) {
+      if (in_array($key, ['mobile', "media_xl", "media_lg", "media_md", "media_sm"])) {
         $spacing['marginLeft'] = $spacing['marginLeft'] ?? 0;
         $spacing['marginTop'] = $spacing['marginTop'] ?? 0;
         $spacing['marginRight'] = $spacing['marginRight'] ?? 0;
@@ -205,25 +205,25 @@ function addGhostKitSpacings($spacings, $block_id) {
 
       switch($key) {
         case($key == "media_xl"):
-          $spacings_array['1200px'] = [
-            'margin' => "{$spacing['marginTop']}px {$spacing['marginRight']}px {$spacing['marginBottom']}px {$spacing['marginLeft']}px",
-            'padding' => "{$spacing['paddingTop']}px {$spacing['paddingRight']}px {$spacing['paddingBottom']}px {$spacing['paddingLeft']}px"
-          ];
-          break;
-        case("media_lg"):
           $spacings_array['992px'] = [
             'margin' => "{$spacing['marginTop']}px {$spacing['marginRight']}px {$spacing['marginBottom']}px {$spacing['marginLeft']}px",
             'padding' => "{$spacing['paddingTop']}px {$spacing['paddingRight']}px {$spacing['paddingBottom']}px {$spacing['paddingLeft']}px"
           ];
           break;
+        case("media_lg"):
+          $spacings_array['768px'] = [
+            'margin' => "{$spacing['marginTop']}px {$spacing['marginRight']}px {$spacing['marginBottom']}px {$spacing['marginLeft']}px",
+            'padding' => "{$spacing['paddingTop']}px {$spacing['paddingRight']}px {$spacing['paddingBottom']}px {$spacing['paddingLeft']}px"
+          ];
+          break;
           case("media_md"):
-            $spacings_array['768px'] = [
+            $spacings_array['576px'] = [
               'margin' => "{$spacing['marginTop']}px {$spacing['marginRight']}px {$spacing['marginBottom']}px {$spacing['marginLeft']}px",
               'padding' => "{$spacing['paddingTop']}px {$spacing['paddingRight']}px {$spacing['paddingBottom']}px {$spacing['paddingLeft']}px"
             ];
             break;
           case("media_sm"):
-            $spacings_array['576px'] = [
+            $spacings_array['50px'] = [
               'margin' => "{$spacing['marginTop']}px {$spacing['marginRight']}px {$spacing['marginBottom']}px {$spacing['marginLeft']}px",
               'padding' => "{$spacing['paddingTop']}px {$spacing['paddingRight']}px {$spacing['paddingBottom']}px {$spacing['paddingLeft']}px"
             ];
@@ -242,7 +242,7 @@ function addGhostKitSpacings($spacings, $block_id) {
           $spacings['paddingRight'] = $spacings['paddingRight'] ?? 0;
           $spacings['paddingBottom'] = $spacings['paddingBottom'] ?? 0;
 
-          $spacings_array['50px'] = [
+          $spacings_array['1200px'] = [
             'margin' => "{$spacings['marginTop']}px {$spacings['marginRight']}px {$spacings['marginBottom']}px {$spacings['marginLeft']}px",
             'padding' => "{$spacings['paddingTop']}px {$spacings['paddingRight']}px {$spacings['paddingBottom']}px {$spacings['paddingLeft']}px"
           ];

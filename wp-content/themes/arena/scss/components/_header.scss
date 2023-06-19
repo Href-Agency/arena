@@ -23,6 +23,9 @@
                 letter-spacing: 0.02em;
             }
         }
+        .current-menu-item{
+            font-weight: 600 !important;
+        }
     }
 
     &__menu a, &__navigation-mobile a:not(.single-link){
