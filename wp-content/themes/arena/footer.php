@@ -18,7 +18,7 @@
                 <div class="heading max-w-[920px]"><?php echo $contact_heading; ?></div>
 
                 <?php if($link):?>
-                    <a class="link mt-28 sm:mt-32" href="<?php echo $link['title']; ?>" target="<?php echo $link['target']; ?>"><?php echo $link['title']; ?></a>
+                    <a class="link mt-28 sm:mt-32 !text-white" href="<?php echo $link['title']; ?>" target="<?php echo $link['target']; ?>"><?php echo $link['title']; ?></a>
                 <?php endif; ?>
               </div>
             <?php endif; ?>

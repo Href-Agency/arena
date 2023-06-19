@@ -157,6 +157,7 @@ gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
         $(this).toggleClass('active')
         $('.site-header').toggleClass('open')
         $('html').toggleClass('overflow-hidden-html');
+        $('.site-header').addClass('up');
       })
 
       var lastScroll = $(window).scrollTop();

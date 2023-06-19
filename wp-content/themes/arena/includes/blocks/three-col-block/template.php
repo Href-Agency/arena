@@ -37,7 +37,7 @@ if ($block && $block_id && $spacings = $block['ghostkitSpacings']) {
 ?>
 
 <!-- Our front-end template -->
-<section id="<?php echo $block_id; ?>" class="<?php echo $class_name; ?> py-60 sm:py-80 lg:py-100 xl:py-120">
+<section id="<?php echo $block_id; ?>" class="<?php echo $class_name; ?> my-60 sm:my-80 lg:my-100 xl:my-120">
     <div class="site-container">
         <?php if($content): ?>
         <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-66 md:gap-20 xl:gap-69">

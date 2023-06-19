@@ -11,7 +11,7 @@
                         height: 200px;
                         width: 100%;
                         object-fit: cover;
-                        @media only screen and (min-width: 1024px){
+                        @media only screen and (min-width: 640px){
                             height: 280px;
                         }
                         @media only screen and (min-width: 1380px){
@@ -34,7 +34,7 @@
                         height: 277px;
                         width: 100%;
                         object-fit: cover;
-                        @media only screen and (min-width: 1024px){
+                        @media only screen and (min-width: 640px){
                             height: 375px;
                         }
                         @media only screen and (min-width: 1380px){

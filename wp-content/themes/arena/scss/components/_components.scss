@@ -79,6 +79,14 @@
 
 }
 
+@media only screen and (max-width: 599px){
+    .single-project, .single-news{
+        .arrow{
+            display: none;
+        }
+    }
+}
+
 .single-project, .single-news{
     h5{
         text-decoration-color: #06A4DE !important;
@@ -112,6 +120,7 @@
         }
     }
 }
+
 
 .single-news{
     img{
