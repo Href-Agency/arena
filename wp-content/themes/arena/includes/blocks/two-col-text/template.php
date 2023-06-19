@@ -41,7 +41,7 @@ if ($block && $block_id && $spacings = $block['ghostkitSpacings']) {
 <section id="<?php echo $block_id; ?>" class="<?php echo $class_name; ?>">
     <div class="site-container grid md:grid-cols-2  gap-40 md:gap-60 xl:gap-101">
         <div class="left-column">
-            <div class="heading max-w-[650px]">
+            <div class="heading max-w-[701px]">
                 <?php echo $header; ?>
             </div>
             <?php if($link):?>
