@@ -57,7 +57,7 @@ html {
 
 .wysywig{
   p{
-    @apply text-12/1.5 md:text-15/1.7 lg:text-18/1.7 text-grey-200;
+    @apply text-12/1.5 md:text-15/1.7 lg:text-16/1.7 2xl:text-18/1.7 text-grey-200;
   }
   p, h1, h2, h3, h4, h5, h6{
     @apply text-blue-300;
@@ -79,6 +79,7 @@ html {
       padding-left: 15px;
       position: relative;
       margin-bottom: 3px;
+      color: #6A6A6A;
       &:before {
         content: '';
         position: absolute;
@@ -100,6 +101,7 @@ html {
       padding-left: 15px;
       position: relative;
       margin-bottom: 3px;
+      color: #6A6A6A;
       &::marker{
         color: #06A2DC;
         font-weight: 700;
@@ -110,23 +112,23 @@ html {
 
 
 h1, .h1{
-  @apply text-73 md:text-80 lg:text-90 leading-1.5 text-blue-300;
+  @apply text-73 md:text-80 2xl:text-90 leading-1.5 text-blue-300;
 }
 
 h2, .h2{
-  @apply text-30 md:text-40 lg:text-50 leading-1.3 tracking-[0.0013em] text-blue-300;
+  @apply text-30 md:text-40 2xl:text-50 leading-1.3 tracking-[0.0013em] text-blue-300;
 }
 
 h3, .h3{
-  @apply text-25 md:text-34 lg:text-40 leading-1 text-blue-300;
+  @apply text-25 md:text-34 2xl:text-40 leading-1 text-blue-300;
 }
 
 h4, .h4{
-  @apply text-18 md:text-22 lg:text-28 leading-1.2 text-blue-300;
+  @apply text-18 md:text-22 xl:text-26 2xl:text-28 leading-1.2 text-blue-300;
 }
 
 h5, .h5{
-  @apply text-18 md:text-21 lg:text-26 leading-1.3 text-blue-300;
+  @apply text-18 md:text-21 xl:text-23 2xl:text-26 leading-1.3 text-blue-300;
 }
 
 span{

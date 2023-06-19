@@ -51,7 +51,7 @@
     <div class="site-container mb-126">
       <?php if (have_posts()) : ?>
 
-        <div class="grid md:grid-cols-2 gap-x-50 xl:gap-x-90 gap-40 md:gap-y-60 xl:gap-y-101 post-list">
+        <div class="grid sm:grid-cols-2 gap-x-50 xl:gap-x-90 gap-40 md:gap-y-60 xl:gap-y-101 post-list">
           <?php while (have_posts()) : the_post();
             $ID = get_the_id();
             $client = get_field('client', $ID);

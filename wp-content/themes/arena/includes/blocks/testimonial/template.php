@@ -71,8 +71,8 @@ if ($block && $block_id && $spacings = $block['ghostkitSpacings']) {
                 <img src="<?php echo get_template_directory_uri() . '/assets/icons/quote.svg'; ?>" alt="">
             </div>
 
-            <div class="mt-55 sm:mt-45 max-w-[1128px]" data-aos="fade-up"><?php echo $quote; ?></div>
-            <h4 class="mt-70 sm:mt-58 !text-20 sm:!text-25 xl:!text-30 font-semibold" data-aos="fade-up"><?php echo $name; ?></h4>
+            <div class="mt-55 sm:mt-45 max-w-[1128px] !text-white" data-aos="fade-up"><?php echo $quote; ?></div>
+            <h4 class="mt-70 sm:mt-58 !text-20 sm:!text-25 xl:!text-30 font-semibold text-white" data-aos="fade-up"><?php echo $name; ?></h4>
             <span class="font-monaco block text-grey-100 mt-7 sm:mt-12" data-aos="fade-up"><?php echo $job_info; ?></span>
             <img class="mt-26 sm:mt-31 w-61 h-61 sm:w-102 sm:h-102 rounded-full overflow-hidden" src="<?php echo $image['url']; ?>" alt="" data-aos="fade-up">
         </div>

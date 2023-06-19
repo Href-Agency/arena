@@ -40,7 +40,7 @@ if ($block && $block_id && $spacings = $block['ghostkitSpacings']) {
 <section id="<?php echo $block_id; ?>" class="<?php echo $class_name; ?> my-60 sm:my-80 lg:my-100 xl:my-120">
     <div class="site-container">
         <?php if($content): ?>
-        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-66 md:gap-20 xl:gap-69">
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-66 md:gap-20 xl:gap-69 md:gap-y-100 xl:gap-y-150">
             <?php for($i = 0; $i < count($content); $i++):
             $image = $content[$i]['image'];
             $header = $content[$i]['header'];

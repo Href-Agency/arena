@@ -42,7 +42,7 @@ if ($block && $block_id && $spacings = $block['ghostkitSpacings']) {
     <div class="site-container">
 
         <?php if($posts):?>
-            <div class="posts grid md:grid-cols-3 gap-y-66 md:gap-y-100 xl:gap-y-133 md:gap-x-20 xl:gap-x-69">
+            <div class="posts grid sm:grid-cols-2 md:grid-cols-3 gap-y-66 md:gap-y-100 xl:gap-y-133 gap-x-20 xl:gap-x-69">
                 <?php foreach($posts as $post):
                     
                     get_template_part('template-parts/team', 'card', ['id' => $post->ID]);

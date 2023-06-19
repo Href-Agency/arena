@@ -45,14 +45,14 @@ if ($block && $block_id && $spacings = $block['ghostkitSpacings']) {
     }
 </style>
 
-<section id="<?php echo $block_id; ?>" class="<?php echo $class_name; ?> sm:h-[75vh] min-h-[min-content] w-screen relative overflow-hidden hero flex items-center justify-center">
+<section id="<?php echo $block_id; ?>" class="<?php echo $class_name; ?> sm:h-[75vh] min-h-[min-content] md:min-h-[700px] w-screen relative overflow-hidden hero flex items-center justify-center">
     <div class="background absolute w-screen h-full z-10 scale-100">
         <img class="desktop w-full h-full object-cover <?php if($mobile_background_image) echo "hidden md:block "?>" src="<?php echo $background_image['url']; ?>" alt="">
         <?php if($mobile_background_image):?>
             <img class="desktop w-full h-full object-cover block md:hidden" src="<?php echo $mobile_background_image['url']; ?>" alt="">
         <?php endif; ?>
     </div>
-    <div class="site-container flex flex-col lg:flex-row items-start justify-between h-fit relative z-50 text-white pt-120 md:pt-150 pb-120 md:pb-50" data-speed="0.9">
+    <div class="site-container flex flex-col lg:flex-row items-start justify-between h-fit relative z-50 text-white pt-120 md:pt-150 pb-120 md:pb-50 md:gap-50" data-speed="0.9">
         <div class="text-white max-w-[583px] text-left"><?php echo $text; ?></div>
 
         <div class="contact-information flex flex-col md:flex-row lg:grid grid-cols-2 gap-y-30 md:gap-x-70 2xl:gap-x-112 md:gap-y-50 mt-50 lg:mt-0">

@@ -52,7 +52,7 @@ if(!$projects){
 
 <section id="<?php echo $block_id; ?>"  class="<?php echo $class_name; ?>">
     <div class="site-container flex flex-col">
-        <div class="grid md:grid-cols-2 gap-x-50 xl:gap-x-90 gap-40 md:gap-y-60 xl:gap-y-101">
+        <div class="grid sm:grid-cols-2 gap-x-50 xl:gap-x-90 gap-40 md:gap-y-60 xl:gap-y-101">
             <?php foreach($projects as $project):
                 $ID = $project->ID;
                 $client = get_field('client', $ID);
