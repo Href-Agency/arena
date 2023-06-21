@@ -53,16 +53,18 @@ if ($block && $block_id && $spacings = $block['ghostkitSpacings']) {
 
         <?php if($posts):?>
             <div class="posts grid sm:grid-cols-2 md:grid-cols-3 gap-66 gap-x-20 xl:gap-x-69">
-                <?php foreach($posts as $post):
-                    
-                    get_template_part('template-parts/news', 'card', ['id' => $post->ID]);
+                <?php foreach($posts as $post):?>
 
-                endforeach; ?>
+                    <div class="aos-container overflow-hidden" data-aos="fade-up" data-aos-offset="100">
+                        <?php get_template_part('template-parts/news', 'card', ['id' => $post->ID]); ?>
+                    </div>
+
+                <?php endforeach; ?>
             </div>
         <?php endif; ?>
 
         <?php if($link):?>
-            <a class="link mt-87 ml-auto md:!hidden !inline-block" href="<?php echo $link['title']; ?>" target="<?php echo $link['target']; ?>"><?php echo $link['title']; ?></a>
+            <a class="link mt-87 ml-auto md:!hidden !inline-block" href="<?php echo $link['url']; ?>" target="<?php echo $link['target']; ?>"><?php echo $link['title']; ?></a>
         <?php endif; ?>
     </div>
 </section>

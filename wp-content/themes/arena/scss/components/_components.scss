@@ -89,15 +89,42 @@
 
 .single-project, .single-news{
     h5{
-        text-decoration-color: #06A4DE !important;
-        text-decoration-thickness: 2px !important;
-        text-underline-offset: 8px !important;
+        // text-decoration-color: #06A4DE !important;
+        // text-decoration-thickness: 2px !important;
+        // text-underline-offset: 8px !important;
+        // transition: all .3s ease;
+        
+        text-decoration: none;
+        background-image: linear-gradient(transparent calc(100% - 2px), #06A4DE 2px);
+        background-size: 0% 100%;
+        background-repeat: no-repeat;
+        transition: background-size 1s;
+        padding-bottom: 2px;
+        background-position: right;
     }
     .image-container{
         overflow: hidden;
         img{
             transition: all .8s ease;
             transform: scale(1);
+        }
+    }
+
+    .title{
+        display: inline-block;
+        position: relative;
+        width: 100%;
+        max-width: 100%;
+        @apply md:pr-[15%] xl:pr-[11%];
+        h5{
+            display: inline;
+        }
+
+        .arrow{
+            position: absolute;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%) scale(0.6);
         }
     }
     &:hover{
@@ -108,11 +135,15 @@
         }
         .title{
             h5{
-                text-decoration-color: #06A4DE !important;
-                text-decoration-thickness: 2px !important;
-                text-underline-offset: 8px !important;
-                text-decoration: underline;
-                font-weight: 600;
+                // text-decoration-color: #06A4DE !important;
+                // text-decoration-thickness: 2px !important;
+                // text-underline-offset: 8px !important;
+                // text-decoration: underline;
+                // font-weight: 600;
+                // transform-origin: left;
+
+                background-size: 100% 100%;
+                background-position: left;
             }
             .arrow{
                 opacity: 1;

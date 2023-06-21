@@ -107,7 +107,7 @@ gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
       }
 
       AOS.init({
-        duration: 600, // Animation duration in milliseconds
+        duration: 900, // Animation duration in milliseconds
         offset: 100, // Offset (in pixels) from the original trigger point
         easing: 'ease-out', // Easing function for the animation
         delay: 0, // Delay (in milliseconds) before animation starts
@@ -165,9 +165,13 @@ gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
       document.addEventListener('scroll', function(){
         if(($(window).scrollTop() > 30 )){
           $('.site-header').addClass('scrolling');
+          setTimeout(function(){
+            $('.site-header').addClass('animation-complete');
+          }, 1200)
          }else{
           if(($(window).scrollTop() < 30 )){
             $('.site-header').removeClass('scrolling');
+            $('.site-header').removeClass('animation-complete');
            }
          }
          if(lastScroll > $(window).scrollTop()){

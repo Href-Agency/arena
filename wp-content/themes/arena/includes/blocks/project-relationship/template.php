@@ -61,7 +61,7 @@ if(!$projects){
                 ?>
 
                 <div class="single-project-container overflow-hidden block">
-                    <div class="aos-container" data-aos="custom-up" data-aos-offset="300">
+                    <div class="aos-container" data-aos="fade-up" data-aos-offset="300">
 
                         <?php 
                             get_template_part('template-parts/project', 'card', ['client' => $client, 'id' => $ID]);
@@ -74,7 +74,7 @@ if(!$projects){
         </div>
 
         <?php if($link):?>
-            <a class="link mt-80 ml-auto !hidden sm:!inline-block" href="<?php echo $link['title']; ?>" target="<?php echo $link['target']; ?>"><?php echo $link['title']; ?></a>
+            <a class="link mt-80 ml-auto !hidden sm:!inline-block" href="<?php echo $link['url']; ?>" target="<?php echo $link['target']; ?>"><?php echo $link['title']; ?></a>
         <?php endif; ?>
     </div>
 </section>

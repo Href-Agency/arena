@@ -52,7 +52,7 @@ if ($block && $block_id && $spacings = $block['ghostkitSpacings']) {
         <?php endif; ?>
 
         <?php if($link):?>
-            <a class="link mt-87 ml-auto md:!hidden !inline-block" href="<?php echo $link['title']; ?>" target="<?php echo $link['target']; ?>"><?php echo $link['title']; ?></a>
+            <a class="link mt-87 ml-auto md:!hidden !inline-block" href="<?php echo $link['url']; ?>" target="<?php echo $link['target']; ?>"><?php echo $link['title']; ?></a>
         <?php endif; ?>
     </div>
 </section>

@@ -58,7 +58,7 @@
             ?>
 
             <div class="single-project-container overflow-hidden block post-list__single">
-                <div class="aos-container" data-aos="custom-up" data-aos-offset="300">
+                <div class="aos-container" data-aos="fade-up" data-aos-offset="300">
 
                   <?php 
                       get_template_part('template-parts/project', 'card', ['client' => $client, 'id' => $ID]);

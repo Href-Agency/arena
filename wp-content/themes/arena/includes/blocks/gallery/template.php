@@ -37,7 +37,7 @@ if ($block && $block_id && $spacings = $block['ghostkitSpacings']) {
 ?>
 
 <!-- Our front-end template -->
-<section id="<?php echo $block_id; ?>" class="<?php echo $class_name; ?> bg-blue-200 py-90 md:py-100 xl:py-123 overflow-hidden pointer-events-none">
+<section id="<?php echo $block_id; ?>" class="<?php echo $class_name; ?> bg-blue-200 py-90 md:py-100 xl:py-123 overflow-hidden">
     <div class="gallery-container">
         <div class="swiper-wrapper items-stretch">
             <?php if($gallery):

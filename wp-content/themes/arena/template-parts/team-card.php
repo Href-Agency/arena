@@ -7,7 +7,7 @@
 
 ?>
 
-<div class="single-news flex flex-col h-full">
+<div class="flex flex-col h-full">
     <div class="image-container relative">
         <img class=" object-cover w-full" src="<?php echo get_the_post_thumbnail_url($ID); ?>" alt="">
     </div>

@@ -47,7 +47,7 @@ if ($block && $block_id && $spacings = $block['ghostkitSpacings']) {
                 ?>
                 <?php if($logo):?>
                     <div class="image-container" data-aos-delay="<?php echo $number; ?>" data-aos="fade-up">
-                        <img class="hover:scale-110" src="<?php echo $logo['url']; ?>" alt="<?php echo $logo['alt']; ?>">
+                        <img class="" src="<?php echo $logo['url']; ?>" alt="<?php echo $logo['alt']; ?>">
                     </div>
                 <?php endif; ?>
                 <?php endwhile;

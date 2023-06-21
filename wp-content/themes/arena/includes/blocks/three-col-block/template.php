@@ -48,7 +48,7 @@ if ($block && $block_id && $spacings = $block['ghostkitSpacings']) {
             ?>
 
             <div class="grid-column overflow-hidden ">
-                <div class="single-column" data-aos="custom-up" data-offset="200">
+                <div class="single-column" data-aos="fade-up" data-offset="200">
                     <?php if($image): ?>
                     <div class="image-container mb-32 sm:mb-40 md:mb-67">
                         <img src="<?php echo $image['url']; ?>" alt="">

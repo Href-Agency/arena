@@ -45,7 +45,7 @@ if ($block && $block_id && $spacings = $block['ghostkitSpacings']) {
                 <?php echo $header; ?>
             </div>
             <?php if($link):?>
-                <a class="link mt-40 !hidden md:!inline-block" href="<?php echo $link['title']; ?>" target="<?php echo $link['target']; ?>"><?php echo $link['title']; ?></a>
+                <a class="link mt-40 !hidden md:!inline-block" href="<?php echo $link['url']; ?>" target="<?php echo $link['target']; ?>"><?php echo $link['title']; ?></a>
             <?php endif; ?>
         </div>
 
@@ -55,7 +55,7 @@ if ($block && $block_id && $spacings = $block['ghostkitSpacings']) {
             </div>
         </div>
         <?php if($link):?>
-            <a class="link md:!hidden !inline-block w-fit" href="<?php echo $link['title']; ?>" target="<?php echo $link['target']; ?>"><?php echo $link['title']; ?></a>
+            <a class="link md:!hidden !inline-block w-fit" href="<?php echo $link['url']; ?>" target="<?php echo $link['target']; ?>"><?php echo $link['title']; ?></a>
         <?php endif; ?>
     </div>
 </section>
