@@ -56,14 +56,14 @@ html {
 }
 
 .wysywig{
-  p{
-    @apply text-12/1.5 md:text-15/1.7 lg:text-16/1.8 text-grey-200 tracking-[0.02em];
-  }
   p, h1, h2, h3, h4, h5, h6{
     @apply text-blue-300;
     &:not(:last-child){
       margin-bottom: 24px !important
     }
+  }
+  p{
+    @apply text-12/1.5 md:text-15/1.7 lg:text-16/1.8 text-grey-200 tracking-[0.02em];
   }
   a{
     padding-bottom: 2px;
