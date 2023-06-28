@@ -49,3 +49,11 @@
         }
     }
 }
+
+.single-post{
+    .text-hero{
+        .wysywig{
+            @apply font-monaco;
+        }
+    }
+}
