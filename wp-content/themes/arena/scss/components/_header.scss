@@ -15,8 +15,8 @@
         li{
             margin-left: 50px;
             a{
-                font-size: 18px;
-                line-height: 22px;
+                @apply text-14 2xl:text-18;
+                line-height: 1.25;
                 position: relative;
                 display: inline-block;
                 text-align: center;

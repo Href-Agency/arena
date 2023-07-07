@@ -89,11 +89,9 @@
 
 .single-project, .single-news{
     h5{
-        // text-decoration-color: #06A4DE !important;
-        // text-decoration-thickness: 2px !important;
-        // text-underline-offset: 8px !important;
-        // transition: all .3s ease;
-        
+        @media only screen and (min-width: 1280px){
+            font-size: 24px !important;
+        }
         text-decoration: none;
         background-image: linear-gradient(transparent calc(100% - 2px), #06A4DE 2px);
         background-size: 0% 100%;
@@ -135,13 +133,6 @@
         }
         .title{
             h5{
-                // text-decoration-color: #06A4DE !important;
-                // text-decoration-thickness: 2px !important;
-                // text-underline-offset: 8px !important;
-                // text-decoration: underline;
-                // font-weight: 600;
-                // transform-origin: left;
-
                 background-size: 100% 100%;
                 background-position: left;
             }

@@ -27,9 +27,9 @@ html {
   overflow: hidden;
   display: inline-block;
   padding-bottom: 2px;
-  font-size: 20px;
+  @apply text-16 md:text-18 2xl:text-20 tracking-wider;
   color: #1F282E;
-  font-weight: 600;
+  font-weight: 700;
   &::after, &::before{
     content: '';
     display: block;
@@ -63,11 +63,11 @@ html {
     }
   }
   p{
-    @apply text-12/1.5 md:text-15/1.7 lg:text-16/1.8 text-grey-200 tracking-[0.02em];
+    @apply text-12/1.5 md:text-13/1.7 lg:text-14/1.7 text-grey-200 tracking-[0.02em];
   }
   a{
     padding-bottom: 2px;
-    @apply text-12/1.5 md:text-15/1.7 lg:text-18/1.7 -mb-8 md:-mb-11;
+    @apply text-12/1.5 md:text-13/1.7 lg:text-14/1.7 -mb-8 md:-mb-11;
     &::after, &::before{
       height: 1px;
       @apply bottom-2 md:bottom-5
@@ -119,23 +119,23 @@ html {
 
 
 h1, .h1{
-  @apply text-73 md:text-80 2xl:text-90 leading-1.5 text-blue-300;
+  @apply text-73 md:text-78 2xl:text-80 leading-1.5 text-blue-300;
 }
 
 h2, .h2{
-  @apply text-30 md:text-40 2xl:text-48 leading-1.3 tracking-[0.0013em] text-blue-300;
+  @apply text-30 md:text-40 xl:text-45 leading-1.3 tracking-[0.015em] text-blue-300;
 }
 
 h3, .h3{
-  @apply text-25 md:text-34 2xl:text-40 leading-1.2 text-blue-300;
+  @apply text-25 md:text-34 2xl:text-36 leading-1.2 text-blue-300;
 }
 
 h4, .h4{
-  @apply text-18 md:text-22 xl:text-26 2xl:text-28 leading-1.2 text-blue-300;
+  @apply text-18 md:text-22 xl:text-24 2xl:text-26 leading-1.2 text-blue-300;
 }
 
 h5, .h5{
-  @apply text-18 md:text-21 xl:text-23 2xl:text-26 leading-[1.45] text-blue-300 tracking-wide;
+  @apply text-18 md:text-20 xl:text-21 2xl:text-22 leading-[1.45] text-blue-300 tracking-wide;
 }
 
 span{
@@ -144,6 +144,7 @@ span{
 
 .font-monaco{
   letter-spacing: 0.0021em;
+  @apply text-10 md:text-12 2xl:text-16 leading-1.2;
 }
 
 @font-face {
