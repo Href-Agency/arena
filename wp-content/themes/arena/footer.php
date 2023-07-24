@@ -66,7 +66,7 @@
               </div>
             </div>
 
-            <div class="copyright-info text-16 leading-1.3 text-grey-100 flex flex-col sm:flex-row">
+            <div class="copyright-info text-14 leading-1.3 text-grey-100 flex flex-col sm:flex-row">
               <span><?php echo $copyright_text; ?></span>
               <a class="sm:ml-20 block" href="<?php echo $policy_link['url']; ?>" target="<?php echo $policy_link['target']; ?>"><?php echo $policy_link['title']; ?></a>
             </div>
