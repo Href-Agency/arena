@@ -1,1 +1,8 @@
-.two-col-text .heading h2{font-size:40px}@media (min-width:1025px){.two-col-text .heading h2{font-size:45px}}
+.two-col-text .heading h2 {
+    font-size: 40px
+}
+@media (min-width: 1025px) {
+    .two-col-text .heading h2 {
+        font-size: 45px
+    }
+}

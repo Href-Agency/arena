@@ -150,6 +150,14 @@ span{
 @font-face {
   font-family: 'avant-garde';
   src: url('../assets/fonts/avant-garde.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'avant-garde';
+  src: url('../assets/fonts/avant-garde-bold.otf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
 }
 
 @font-face {
