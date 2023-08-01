@@ -153,6 +153,13 @@ span{
   font-weight: normal;
   font-style: normal;
 }
+
+@font-face {
+  font-family: 'avant-garde';
+  src: url('../assets/fonts/avant-garde-semibold.otf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+}
 @font-face {
   font-family: 'avant-garde';
   src: url('../assets/fonts/avant-garde-bold.otf') format('truetype');
