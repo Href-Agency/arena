@@ -6,11 +6,15 @@
     'copy' => get_the_excerpt() ?? false
   );
 
+  $ID = get_the_id();
+
   $args = array(
-    'post_type' => 'projects',
-    'posts_per_page' => 3,
-    'orderby' => 'date',
-    'order' => 'DESC'
+      'post_type' => 'projects',
+      'posts_per_page' => 3,
+      'orderby' => 'date',
+      'order' => 'DESC',
+      'post__not_in' => array($ID), // Exclude the current post
+      'post_status' => 'publish', // Retrieve only published posts
   );
 
   $query = new WP_Query($args);
