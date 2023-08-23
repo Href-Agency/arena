@@ -150,6 +150,22 @@ span{
 @font-face {
   font-family: 'avant-garde';
   src: url('../assets/fonts/avant-garde.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'avant-garde';
+  src: url('../assets/fonts/avant-garde-semibold.otf') format('opentype');
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'avant-garde';
+  src: url('../assets/fonts/avant-garde-semibold.otf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+
 }
 
 @font-face {
