@@ -15,6 +15,6 @@
     </div>
 
     <?php if($client):?>
-        <span class="mt-11 sm:mt-23 font-monaco block text-grey-100"><?php echo $client; ?></span>
+        <span class="mt-11 sm:mt-[11px] font-monaco block text-grey-100"><?php echo $client; ?></span>
     <?php endif; ?>
 </a>

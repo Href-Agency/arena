@@ -135,7 +135,7 @@ h4, .h4{
 }
 
 h5, .h5{
-  @apply text-18 md:text-20 xl:text-21 2xl:text-22 leading-[1.45] text-blue-300 tracking-wide;
+  @apply text-18 md:text-18 xl:text-19 2xl:text-20 leading-[1.45] text-blue-300 tracking-wide;
 }
 
 span{
@@ -144,7 +144,7 @@ span{
 
 .font-monaco{
   letter-spacing: 0.0021em;
-  @apply text-10 md:text-12 2xl:text-16 leading-1.2;
+  @apply text-10 md:text-12 2xl:text-14 leading-1.2;
 }
 
 @font-face {

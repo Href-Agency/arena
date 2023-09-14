@@ -90,7 +90,7 @@
 .single-project, .single-news{
     h5{
         @media only screen and (min-width: 1280px){
-            font-size: 24px !important;
+            font-size: 21px !important;
         }
         text-decoration: none;
         background-image: linear-gradient(transparent calc(100% - 2px), #06A4DE 2px);
@@ -99,7 +99,7 @@
         transition: background-size 1s;
         padding-bottom: 2px;
         background-position: right;
-        letter-spacing: 0.05em !important;
+        letter-spacing: -0.02em !important;
     }
     .image-container{
         overflow: hidden;

@@ -26,3 +26,8 @@ function script_enqueues() {
    * }
    */
 }
+
+function remove_unnecessary_script() {
+  wp_deregister_script('ghostkit'); // Replace 'script-handle' with the actual handle of the script you want to deregister.
+}
+add_action('wp_enqueue_scripts', 'remove_unnecessary_script', 100);
