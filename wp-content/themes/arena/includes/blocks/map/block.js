@@ -15,7 +15,8 @@ const map = (() => {
                     },
                     'geometry': {
                         'type': 'Point',
-                        'coordinates': [-2.539580, 53.591770]
+                        'coordinates': [-2.529063, 53.587563]
+                        
                     }
                 }
             ]
@@ -26,7 +27,7 @@ const map = (() => {
         var map = new mapboxgl.Map({
         container: 'map',
         style: 'mapbox://styles/radek-dev/clixtbvgd007z01pb643r38z8',
-        center: [-2.539580, 53.591770],
+        center: [-2.529063, 53.587563],
         zoom: 17
         });
 

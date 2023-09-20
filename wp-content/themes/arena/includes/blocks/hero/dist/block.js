@@ -18,7 +18,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _gsap_core_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./gsap-core.js */ "./node_modules/gsap/gsap-core.js");
 /*!
- * CSSPlugin 3.12.2
+ * CSSPlugin 3.12.1
  * https://greensock.com
  *
  * Copyright 2008-2023, GreenSock. All rights reserved.
@@ -1596,7 +1596,7 @@ function _defineProperties(target, props) { for (var i = 0; i < props.length; i+
 function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
 
 /*!
- * Observer 3.12.2
+ * Observer 3.12.1
  * https://greensock.com
  *
  * @license Copyright 2008-2023, GreenSock. All rights reserved.
@@ -1728,7 +1728,7 @@ var gsap,
       offset = sc === _vertical.sc ? 1 : 2;
 
   !~i && (i = _scrollers.push(element) - 1);
-  _scrollers[i + offset] || _addListener(element, "scroll", _onScroll); // clear the cache when a scroll occurs
+  _scrollers[i + offset] || element.addEventListener("scroll", _onScroll); // clear the cache when a scroll occurs
 
   var prev = _scrollers[i + offset],
       func = prev || (_scrollers[i + offset] = _scrollCacheFunc(_getProxyProp(element, s), true) || (_isViewport(element) ? sc : _scrollCacheFunc(function (value) {
@@ -2253,7 +2253,7 @@ var Observer = /*#__PURE__*/function () {
 
   return Observer;
 }();
-Observer.version = "3.12.2";
+Observer.version = "3.12.1";
 
 Observer.create = function (vars) {
   return new Observer(vars);
@@ -2289,7 +2289,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _Observer_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Observer.js */ "./node_modules/gsap/Observer.js");
 /*!
- * ScrollTrigger 3.12.2
+ * ScrollTrigger 3.12.1
  * https://greensock.com
  *
  * @license Copyright 2008-2023, GreenSock. All rights reserved.
@@ -2330,8 +2330,6 @@ var gsap,
     _fixIOSBug,
     _context,
     _scrollRestoration,
-    _div100vh,
-    _100vh,
     _limitCallbacks,
     // if true, we'll only trigger callbacks if the active state toggles, so if you scroll immediately past both the start and end positions of a ScrollTrigger (thus inactive to inactive), neither its onEnter nor onLeave will be called. This is useful during startup.
 _startup = 1,
@@ -2372,13 +2370,10 @@ _pointerDownHandler = function _pointerDownHandler() {
     _isViewport = function _isViewport(e) {
   return !!~_root.indexOf(e);
 },
-    _getViewportDimension = function _getViewportDimension(dimensionProperty) {
-  return (dimensionProperty === "Height" ? _100vh : _win["inner" + dimensionProperty]) || _docEl["client" + dimensionProperty] || _body["client" + dimensionProperty];
-},
     _getBoundsFunc = function _getBoundsFunc(element) {
   return (0,_Observer_js__WEBPACK_IMPORTED_MODULE_0__._getProxyProp)(element, "getBoundingClientRect") || (_isViewport(element) ? function () {
     _winOffsets.width = _win.innerWidth;
-    _winOffsets.height = _100vh;
+    _winOffsets.height = _win.innerHeight;
     return _winOffsets;
   } : function () {
     return _getBounds(element);
@@ -2391,7 +2386,7 @@ _pointerDownHandler = function _pointerDownHandler() {
   return (a = (0,_Observer_js__WEBPACK_IMPORTED_MODULE_0__._getProxyProp)(scroller, "getBoundingClientRect")) ? function () {
     return a()[d];
   } : function () {
-    return (isViewport ? _getViewportDimension(d2) : scroller["client" + d2]) || 0;
+    return (isViewport ? _win["inner" + d2] : scroller["client" + d2]) || 0;
   };
 },
     _getOffsetsFunc = function _getOffsetsFunc(element, isViewport) {
@@ -2404,7 +2399,7 @@ _pointerDownHandler = function _pointerDownHandler() {
       d2 = _ref2.d2,
       d = _ref2.d,
       a = _ref2.a;
-  return Math.max(0, (s = "scroll" + d2) && (a = (0,_Observer_js__WEBPACK_IMPORTED_MODULE_0__._getProxyProp)(element, s)) ? a() - _getBoundsFunc(element)()[d] : _isViewport(element) ? (_docEl[s] || _body[s]) - _getViewportDimension(d2) : element[s] - element["offset" + d2]);
+  return Math.max(0, (s = "scroll" + d2) && (a = (0,_Observer_js__WEBPACK_IMPORTED_MODULE_0__._getProxyProp)(element, s)) ? a() - _getBoundsFunc(element)()[d] : _isViewport(element) ? (_docEl[s] || _body[s]) - (_win["inner" + d2] || _docEl["client" + d2] || _body["client" + d2]) : element[s] - element["offset" + d2]);
 },
     _iterateAutoRefresh = function _iterateAutoRefresh(func, events) {
   for (var i = 0; i < _autoRefresh.length; i += 3) {
@@ -2743,21 +2738,12 @@ _revertRecorded = function _revertRecorded(media) {
     });
   }
 },
-    _refresh100vh = function _refresh100vh() {
-  _body.appendChild(_div100vh);
-
-  _100vh = _div100vh.offsetHeight || _win.innerHeight;
-
-  _body.removeChild(_div100vh);
-},
     _refreshAll = function _refreshAll(force, skipRevert) {
   if (_lastScrollTime && !force) {
     _addListener(ScrollTrigger, "scrollEnd", _softRefresh);
 
     return;
   }
-
-  _refresh100vh();
 
   _refreshingAll = ScrollTrigger.isRefreshing = true;
 
@@ -3559,8 +3545,7 @@ var ScrollTrigger = /*#__PURE__*/function () {
       !_refreshingAll && onRefreshInit && onRefreshInit(self);
       _refreshing = self;
 
-      if (tweenTo.tween && !position) {
-        // we skip this if a position is passed in because typically that's from .setPositions() and it's best to allow in-progress snapping to continue.
+      if (tweenTo.tween) {
         tweenTo.tween.kill();
         tweenTo.tween = 0;
       }
@@ -3806,8 +3791,8 @@ var ScrollTrigger = /*#__PURE__*/function () {
       lastRefresh = _getTime();
 
       if (snapDelayedCall) {
-        lastSnap = -1; // just so snapping gets re-enabled, clear out any recorded last value
-        // self.isActive && scrollFunc(start + change * prevProgress); // previously this line was here to ensure that when snapping kicks in, it's from the previous progress but in some cases that's not desirable, like an all-page ScrollTrigger when new content gets added to the page, that'd totally change the progress.
+        lastSnap = -1;
+        self.isActive && scrollFunc(start + change * prevProgress); // just so snapping gets re-enabled, clear out any recorded last value
 
         snapDelayedCall.restart(true);
       }
@@ -4034,7 +4019,8 @@ var ScrollTrigger = /*#__PURE__*/function () {
 
         _addListener(scroller, "resize", _onResize);
 
-        isViewport || _addListener(scroller, "scroll", _onScroll);
+        _addListener(isViewport ? _doc : scroller, "scroll", _onScroll);
+
         onRefreshInit && _addListener(ScrollTrigger, "refreshInit", onRefreshInit);
 
         if (reset !== false) {
@@ -4104,7 +4090,7 @@ var ScrollTrigger = /*#__PURE__*/function () {
 
           _removeListener(scroller, "resize", _onResize);
 
-          isViewport || _removeListener(scroller, "scroll", _onScroll);
+          _removeListener(scroller, "scroll", _onScroll);
         }
       }
     };
@@ -4248,12 +4234,6 @@ var ScrollTrigger = /*#__PURE__*/function () {
 
       if (_body) {
         _enabled = 1;
-        _div100vh = document.createElement("div"); // to solve mobile browser address bar show/hide resizing, we shouldn't rely on window.innerHeight. Instead, use a <div> with its height set to 100vh and measure that since that's what the scrolling is based on anyway and it's not affected by address bar showing/hiding.
-
-        _div100vh.style.height = "100vh";
-        _div100vh.style.position = "absolute";
-
-        _refresh100vh();
 
         _rafBugFix();
 
@@ -4434,7 +4414,7 @@ var ScrollTrigger = /*#__PURE__*/function () {
 
   return ScrollTrigger;
 }();
-ScrollTrigger.version = "3.12.2";
+ScrollTrigger.version = "3.12.1";
 
 ScrollTrigger.saveStyles = function (targets) {
   return targets ? _toArray(targets).forEach(function (target) {
@@ -4980,7 +4960,7 @@ function _assertThisInitialized(self) { if (self === void 0) { throw new Referen
 function _inheritsLoose(subClass, superClass) { subClass.prototype = Object.create(superClass.prototype); subClass.prototype.constructor = subClass; subClass.__proto__ = superClass; }
 
 /*!
- * GSAP 3.12.2
+ * GSAP 3.12.1
  * https://greensock.com
  *
  * @license Copyright 2008-2023, GreenSock. All rights reserved.
@@ -5376,8 +5356,8 @@ _totalTimeToTime = (clampedTotalTime, duration, repeat, repeatDelay, yoyo) => {
 _postAddChecks = function _postAddChecks(timeline, child) {
   var t;
 
-  if (child._time || !child._dur && child._initted || child._start < timeline._time && (child._dur || !child.add)) {
-    // in case, for example, the _start is moved on a tween that has already rendered, or if it's being inserted into a timeline BEFORE where the playhead is currently. Imagine it's at its end state, then the startTime is moved WAY later (after the end of this timeline), it should render at its beginning. Special case: if it's a timeline (has .add() method) and no duration, we can skip rendering because the user may be populating it AFTER adding it to a parent timeline (unconventional, but possible, and we wouldn't want it to get removed if the parent's autoRemoveChildren is true).
+  if (child._time || child._initted && !child._dur) {
+    //in case, for example, the _start is moved on a tween that has already rendered. Imagine it's at its end state, then the startTime is moved WAY later (after the end of this timeline), it should render at its beginning.
     t = _parentToChildTotalTime(timeline.rawTime(), child);
 
     if (!child._dur || _clamp(0, child.totalDuration(), t) - child._tTime > _tinyNum) {
@@ -6834,7 +6814,7 @@ var Animation = /*#__PURE__*/function () {
       animation = animation._dp;
     }
 
-    return !this.parent && this._sat ? this._sat.vars.immediateRender ? -Infinity : this._sat.globalTime(rawTime) : time; // the _startAt tweens for .fromTo() and .from() that have immediateRender should always be FIRST in the timeline (important for context.revert()). "_sat" stands for _startAtTween, referring to the parent tween that created the _startAt. We must discern if that tween had immediateRender so that we can know whether or not to prioritize it in revert().
+    return !this.parent && this._sat ? this._sat.vars.immediateRender ? -1 : this._sat.globalTime(rawTime) : time; // the _startAt tweens for .fromTo() and .from() that have immediateRender should always be FIRST in the timeline (important for context.revert()). "_sat" stands for _startAtTween, referring to the parent tween that created the _startAt. We must discern if that tween had immediateRender so that we can know whether or not to prioritize it in revert().
   };
 
   _proto.repeat = function repeat(value) {
@@ -7155,8 +7135,7 @@ var Timeline = /*#__PURE__*/function (_Animation) {
           var rewinding = yoyo && prevIteration & 1,
               doesWrap = rewinding === (yoyo && iteration & 1);
           iteration < prevIteration && (rewinding = !rewinding);
-          prevTime = rewinding ? 0 : tTime % dur ? dur : tTime; // if the playhead is landing exactly at the end of an iteration, use that totalTime rather than only the duration, otherwise it'll skip the 2nd render since it's effectively at the same time.
-
+          prevTime = rewinding ? 0 : dur;
           this._lock = 1;
           this.render(prevTime || (isYoyo ? 0 : _roundPrecise(iteration * cycleDuration)), suppressEvents, !dur)._lock = 0;
           this._tTime = tTime; // if a user gets the iteration() inside the onRepeat, for example, it should be accurate.
@@ -7944,7 +7923,7 @@ _forceAllPropTweens,
           immediateRender: immediateRender,
           //zero-duration tweens render immediately by default, but if we're not specifically instructed to render this tween immediately, we should skip this and merely _init() to record the starting values (rendering them immediately would push them to completion which is wasteful in that case - we'd have to render(-1) immediately after)
           stagger: 0,
-          parent: parent //ensures that nested tweens that had a stagger are handled properly, like gsap.from(".class", {y: gsap.utils.wrap([-100,100]), stagger: 0.5})
+          parent: parent //ensures that nested tweens that had a stagger are handled properly, like gsap.from(".class", {y:gsap.utils.wrap([-100,100])})
 
         }, cleanVars);
         harnessVars && (p[harness.prop] = harnessVars); // in case someone does something like .from(..., {css:{}})
@@ -8965,13 +8944,13 @@ var Context = /*#__PURE__*/function () {
           t: t
         };
       }).sort(function (a, b) {
-        return b.g - a.g || -Infinity;
+        return b.g - a.g || -1;
       }).forEach(function (o) {
         return o.t.revert(revert);
       }); // note: all of the _startAt tweens should be reverted in reverse order that they were created, and they'll all have the same globalTime (-1) so the " || -1" in the sort keeps the order properly.
 
       this.data.forEach(function (e) {
-        return !(e instanceof Tween) && e.revert && e.revert(revert);
+        return e instanceof Timeline ? e.data !== "nested" && e.kill() : !(e instanceof Tween) && e.revert && e.revert(revert);
       });
 
       this._r.forEach(function (f) {
@@ -9411,7 +9390,7 @@ var gsap = _gsap.registerPlugin({
   }
 }, _buildModifierPlugin("roundProps", _roundModifier), _buildModifierPlugin("modifiers"), _buildModifierPlugin("snap", snap)) || _gsap; //to prevent the core plugins from being dropped via aggressive tree shaking, we must include them in the variable declaration in this way.
 
-Tween.version = Timeline.version = gsap.version = "3.12.2";
+Tween.version = Timeline.version = gsap.version = "3.12.1";
 _coreReady = 1;
 _windowExists() && _wake();
 var Power0 = _easeMap.Power0,
