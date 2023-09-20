@@ -27,9 +27,10 @@ html {
   overflow: hidden;
   display: inline-block;
   padding-bottom: 2px;
-  @apply text-18 md:text-18 xl:text-19 2xl:text-20 tracking-wider;
+  @apply text-18 md:text-18 xl:text-19 2xl:text-20;
   color: #1F282E;
   font-weight: 700;
+  letter-spacing: -.02em;
 
   @media only screen and (min-width: 1280px){
     font-size: 21px !important;
