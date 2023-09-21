@@ -82,7 +82,7 @@ if ($block && $block_id && $spacings = $block['ghostkitSpacings']) {
                     ?>
                     <?php if ($video) : ?>
                         <div class="video-container image-container <?php echo $image_size; ?>" <?php if ($image_size == 'small'): ?> data-speed="1.03" <?php else : ?> data-speed="0.98" <?php endif; ?>>
-                            <video source="<?php echo $video; ?>" poster="<?php echo $image_poste['url']; ?>" playsinline="true" controls="true"></video>
+                            <video style="width: 100%" source="<?php echo $video; ?>" poster="<?php echo $image_poste['url']; ?>" playsinline="true" controls="true"></video>
                         </div>
                     <?php endif; ?>
                     <?php endif; endfor; ?>
