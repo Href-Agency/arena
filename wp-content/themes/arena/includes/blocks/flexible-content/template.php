@@ -78,7 +78,7 @@ if ($block && $block_id && $spacings = $block['ghostkitSpacings']) {
                         elseif($content[$i]['acf_fc_layout'] == 'video') :
                             $video = $content[$i]['video'];
                             $image_poster = $content[$i]['image_poster'];
-                            $size = $content[$i]['size'] ?? 'small'; 
+                            $size = $content[$i]['size'] ?? 'full'; 
                     ?>
                     <?php if ($video) : ?>
                         <div class="video-container image-container <?php echo $size; ?>" <?php if ($size == 'small'): ?> data-speed="1.03" <?php else : ?> data-speed="0.98" <?php endif; ?>>
